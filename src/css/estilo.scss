@@ -1,8 +1,144 @@
-$color : white;
 
-#app
-{
-    background-color: $color;
-    height: 200px;
+$bg-color : #c5e6f2;;
+$depth-match : #472d2d;
+$depth-match-partial : #2734e996;
+
+.depth-panel {
+    height: 99%;
+    // border: 1px solid white;    
 }
 
+.depth-list 
+{
+    margin-top: 2rem;
+
+    & .card{
+        background-color: lighten($bg-color , 3%);
+    } 
+}
+.depth-item
+{
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+
+
+.item-enter {
+    opacity: 0;
+}
+
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.item-exit {
+    opacity: 1;
+}
+
+.item-exit-active {
+    opacity: 0;
+    transition: opacity 500ms ease-in;
+  }
+
+.card-depth{
+    font-size: 11px;
+    height: 261px;
+    min-width: 350px;
+}
+
+.card-depth:hover {
+    background-color:lighten($bg-color , 15%);
+
+// transform: scale(.98);
+// transition: all .1s ease;
+}
+.depth-item-in 
+{
+    opacity: 1;
+    border: 1px solid lighten($bg-color , 60%);
+    transform: scale(1.05);
+    transition: all .15s ease;
+}
+
+.depth-item-in .depth-producto{
+    color: lighten(red , 15%);
+    font-size: 15px;
+    font-style: italic;
+    transition: all .2s ease;
+}
+.depth-item-over
+{
+    background-color:lighten($bg-color , 20%);
+}
+
+.card-depth-empty
+{
+    height: 261px;
+    min-width: 350px;
+}
+
+.item-owner-depth{
+
+    //border: 1px $depth-match solid;
+    // background-color: lighten($color: $depth-match, $amount: 20);
+    // transition: all .5s cubic-bezier(0, 0.8, 0, 1.27);
+    background-color: $depth-match;
+    animation: depth-animation 1.8s ease-in-out alternate-reverse infinite;
+    
+}
+
+.item-owner-depth-partial
+{
+    //border: 1px $depth-match-partial solid;
+
+//    background-color: #326b8c69 !important;//lighten($color: $depth-match-partial, $amount: 20);
+    //transition: all .5s cubic-bezier(0, 0.8, 0, 1.27);
+
+    //background: linear-gradient(45deg, #6e75d496, #1a1e9452);
+    
+    background-color: $depth-match-partial;
+    animation: depth-partial-animation 1.8s ease-in-out alternate-reverse infinite;
+
+
+}
+
+
+.container-toolbar
+{
+    //width: 300px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+@keyframes depth-animation
+{
+    0%{
+        background-color: $depth-match;
+    }
+    50%{
+        background-color:  lighten($color: $depth-match, $amount: 10);
+    }
+
+    100%{
+        background-color: lighten($color: $depth-match, $amount: 15);
+    }
+
+}
+
+
+@keyframes depth-partial-animation
+{
+    0%{
+        background-color: $depth-match-partial;
+    }
+    50%{
+        background-color:  lighten($color: $depth-match-partial, $amount: 10);
+    }
+
+    100%{
+        background-color:lighten($color: $depth-match-partial, $amount: 15);
+    }
+
+}

@@ -1,0 +1,78 @@
+.depth-panel {
+  height: 99%;
+  background-color: transparent; }
+
+.depth-list {
+  margin-top: 2rem; }
+  .depth-list .card {
+    background-color: #1a2a30; }
+
+.depth-item {
+  margin-bottom: 2rem;
+  margin-left: 1rem; }
+
+.item-enter {
+  opacity: 0; }
+
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in; }
+
+.item-exit {
+  opacity: 1; }
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in; }
+
+.card-depth {
+  font-size: 11px;
+  height: 261px;
+  min-width: 350px; }
+
+.card-depth:hover {
+  background-color: #304c57; }
+
+.depth-item-in {
+  opacity: 1;
+  border: 1px solid #a2bfcb;
+  transform: scale(1.05);
+  transition: all .15s ease; }
+
+.depth-item-in .depth-producto {
+  color: #ff4d4d;
+  font-size: 15px;
+  font-style: italic;
+  transition: all .2s ease; }
+
+.depth-item-over {
+  background-color: #395a68; }
+
+.card-depth-empty {
+  height: 261px;
+  min-width: 350px; }
+
+.item-owner-depth {
+  background-color: #472d2d;
+  animation: depth-animation 1.8s ease-in-out alternate-reverse infinite; }
+
+.item-owner-depth-partial {
+  background-color: #2734e996;
+  animation: depth-partial-animation 1.8s ease-in-out alternate-reverse infinite; }
+
+@keyframes depth-animation {
+  0% {
+    background-color: #472d2d; }
+  50% {
+    background-color: #664141; }
+  100% {
+    background-color: #764b4b; } }
+
+@keyframes depth-partial-animation {
+  0% {
+    background-color: #2734e996; }
+  50% {
+    background-color: rgba(85, 96, 238, 0.588235); }
+  100% {
+    background-color: rgba(108, 117, 240, 0.588235); } }
+

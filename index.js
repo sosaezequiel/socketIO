@@ -22,6 +22,11 @@ io.on('connection', function (socket) {
 
   socket.broadcast.emit('conexiones', { type : 1 ,msg: 'nueva conexion ', numero_de_clientes });
 
+  socket.on('newItem', function (data) {
+    console.log(data.msg);
+    socket.broadcast.emit("newItem", data);
+  });
+
   socket.on('push', function (data) {
     console.log(data.msg);
   });

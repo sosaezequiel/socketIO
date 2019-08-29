@@ -1,18 +1,36 @@
-import React  from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
+import socketService from './services/socketService';
+
 import "./css/estilo.scss";
 
 
-function App(props){
+
+$.extend(true, window, {
+    MAE: {
+        SocketService: socketService
+    }
+});
+
+
+
+function App(props) {
 
     return "········";
-} 
+}
 
 ReactDOM.render(<App />, document.querySelector("#app"));
 
 
-var socket = io.connect('http://localhost:3000');
-socket.on('news', function (data) {
-  console.log(data.msg);
-  socket.emit('push', { msg: 'desde el cliente' });
+socketService.connect(function () {
+
+    console.log("conectado");
+    socketService.subscribe("news", function (data) {
+        console.log(data);
+        socketService.emit("push", { msg: "desde el cliente atravez de servicio" });
+    });
+
 });
+
+
+

@@ -1,6 +1,6 @@
 ﻿var path = require('path');
 var MiniCSSExtractPlugin = require('mini-css-extract-plugin');
-//console.log("$$$$$$$ " +path.resolve(__dirname, 'public/dist'));
+
 
 module.exports = {
     entry: './src/main.js',

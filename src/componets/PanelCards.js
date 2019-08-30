@@ -9,9 +9,13 @@ function DepthPanel(props) {
 
     function clickNew()
     {
-        Demo.SocketService.emit("newItem", {name : "a"});
+        Demo.SocketService.emit("newItem", {name : "a", msg : "nuevo desde cliente"});
     }
 
+    function clickClear()
+    {
+        Demo.SocketService.emit("clearItem", {name : "a", msg : "clear desde cliente"});
+    }
 
     return (
         <>
@@ -19,7 +23,10 @@ function DepthPanel(props) {
                <div className="row">
                     <div className="col-6">
                         <a onClick={clickNew} className="btn btn-dark">Nuevo</a>    
-                    </div>   
+                    </div>
+                    <div className="col-6">
+                        <a onClick={clickClear} className="btn btn-dark">Limpiar</a>    
+                    </div>     
                 </div> 
 
             </div>

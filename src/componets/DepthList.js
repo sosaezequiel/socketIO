@@ -19,9 +19,19 @@ function DepthList() {
         setList(itemList);
     }
 
+    function onClearItem(data)
+    {
+        itemList.length = 0;
+        setList([]);
+        
+    }
+
+
+
     useEffect(() => {
 
         Demo.SocketService.subscribe("newItem", onNewItem);
+        Demo.SocketService.subscribe("clearItem", onClearItem);
 
         return () => {
 

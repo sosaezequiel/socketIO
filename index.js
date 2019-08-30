@@ -28,6 +28,13 @@ io.on('connection', function (socket) {
     socket.broadcast.emit("newItem", data);
   });
 
+  socket.on('clearItem', function (data) {
+    console.log(data.msg);
+    socket.emit("clearItem", data);
+    socket.broadcast.emit("clearItem", data);
+  });
+  
+
   socket.on('push', function (data) {
     console.log(data.msg);
   });

@@ -4,7 +4,7 @@ var isConnect = false;
 const socketService =
     {
         connect: function connect(callback) {
-            socket = io.connect('http://localhost:3000');
+            socket = io.connect('http://rsosa:3000');
             socket.on("connect", function () {
                 isConnect = true;
                 callback();

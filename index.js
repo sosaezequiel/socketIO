@@ -24,6 +24,7 @@ io.on('connection', function (socket) {
 
   socket.on('newItem', function (data) {
     console.log(data.msg);
+    socket.emit("newItem", data);
     socket.broadcast.emit("newItem", data);
   });
 

@@ -1,5 +1,5 @@
 
-$bg-color : #0ba2da;;
+$bg-color : #152126;;;
 $depth-match : #472d2d;
 $depth-match-partial : #2734e996;
 
@@ -109,7 +109,15 @@ $depth-match-partial : #2734e996;
 {
     //width: 300px;
     height: 100px;
-    border: 1px solid red;
+    //border: 1px solid red;
+}
+
+.border-right {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+body {
+    color: #e3e3e3;
 }
 
 @keyframes depth-animation

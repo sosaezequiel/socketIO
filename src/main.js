@@ -15,9 +15,6 @@ $.extend(true, window, {
 });
 
 
-ReactDOM.render(<PanelCards />, document.querySelector("#app"));
-
-
 socketService.connect(function () {
 
     console.log("conectado");
@@ -27,6 +24,11 @@ socketService.connect(function () {
     });
 
 });
+
+ReactDOM.render(<PanelCards />, document.querySelector("#app"));
+
+
+
 
 
 

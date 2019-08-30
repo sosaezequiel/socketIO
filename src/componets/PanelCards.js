@@ -15,10 +15,10 @@ function DepthPanel(props) {
 
     return (
         <>
-            <div className="container-toolbar">
+            <div className="container-toolbar d-flex flex-column justify-content-end align-items-center">
                <div className="row">
                     <div className="col-6">
-                        <a onClick={clickNew} className="btn-dark">Click</a>    
+                        <a onClick={clickNew} className="btn btn-dark">Nuevo</a>    
                     </div>   
                 </div> 
 

@@ -4,7 +4,7 @@
 .depth-list {
   margin-top: 2rem; }
   .depth-list .card {
-    background-color: #0cade9; }
+    background-color: #1a2a30; }
 
 .depth-item {
   margin-bottom: 2rem;
@@ -30,11 +30,11 @@
   min-width: 350px; }
 
 .card-depth:hover {
-  background-color: #3cc3f5; }
+  background-color: #304c57; }
 
 .depth-item-in {
   opacity: 1;
-  border: 1px solid white;
+  border: 1px solid #a2bfcb;
   transform: scale(1.05);
   transition: all .15s ease; }
 
@@ -45,7 +45,7 @@
   transition: all .2s ease; }
 
 .depth-item-over {
-  background-color: #55cbf6; }
+  background-color: #395a68; }
 
 .card-depth-empty {
   height: 261px;
@@ -60,8 +60,13 @@
   animation: depth-partial-animation 1.8s ease-in-out alternate-reverse infinite; }
 
 .container-toolbar {
-  height: 100px;
-  border: 1px solid red; }
+  height: 100px; }
+
+.border-right {
+  border-right: 1px solid #dee2e6 !important; }
+
+body {
+  color: #e3e3e3; }
 
 @keyframes depth-animation {
   0% {

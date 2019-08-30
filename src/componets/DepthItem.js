@@ -99,7 +99,7 @@ function DepthItem(props) {
             </div>
             <div className="card-body">
                 <div className="row">
-                    <div className="col-12 text-center border">Offers</div>
+                    <div className="col-12 text-center border">Habitacion</div>
                 </div>
                 <div className="row">
                     <div className="col-6 text-center border">

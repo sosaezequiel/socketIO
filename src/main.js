@@ -20,7 +20,7 @@ socketService.connect(function () {
     console.log("conectado");
     socketService.subscribe("conexiones", function (data) {
         console.dir(data);
-        socketService.emit("push", { msg: "desde el cliente atravez de servicio" });
+        socketService.emit("push", { msg: "desde el cliente con de servicio" });
     });
 
 });

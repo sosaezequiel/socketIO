@@ -661,7 +661,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar socket;\nvar isConnect = false;\nconst socketService = {\n  connect: function connect(callback) {\n    socket = io.connect('http://rsosa:3000');\n    socket.on(\"connect\", function () {\n      isConnect = true;\n      callback();\n    });\n  },\n  subscribe: function (eventName, callback) {\n    if (!isConnect) {\n      console.warn(\"no está conectado\");\n      return;\n    }\n\n    if (socket) {\n      socket.on(eventName, function (data) {\n        callback(data);\n      });\n    }\n  },\n  emit: function (eventName, payload) {\n    socket.emit(eventName, payload);\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (socketService);\n\n//# sourceURL=webpack:///./src/services/socketService.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar socket;\nvar isConnect = false;\nconst socketService = {\n  connect: function connect(callback) {\n    socket = io.connect('http://192.168.0.7:3000');\n    socket.on(\"connect\", function () {\n      isConnect = true;\n      callback();\n    });\n  },\n  subscribe: function (eventName, callback) {\n    if (!isConnect) {\n      console.warn(\"no está conectado\");\n      return;\n    }\n\n    if (socket) {\n      socket.on(eventName, function (data) {\n        callback(data);\n      });\n    }\n  },\n  emit: function (eventName, payload) {\n    socket.emit(eventName, payload);\n  }\n};\n/* harmony default export */ __webpack_exports__[\"default\"] = (socketService);\n\n//# sourceURL=webpack:///./src/services/socketService.js?");
 
 /***/ })
 
